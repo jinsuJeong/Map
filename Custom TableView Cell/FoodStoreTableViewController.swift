@@ -56,6 +56,20 @@ class FoodStoreTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //전화걸기
+        let optionMenu = UIAlertController(title: "전화걸기" + foodStoreNames[indexPath.row], message: foodStoreTel[indexPath.row], preferredStyle: .actionSheet)
+        let callAction = UIAlertAction(title: "전화를 거시겠습니까?", style: .default){
+            (action:UIAlertAction) -> Void in
+            print("전화를 걸고 있습니다.")
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        optionMenu.addAction(callAction)
+        optionMenu.addAction(cancelAction)
+        present(optionMenu, animated: true, completion: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
