@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -78,6 +79,7 @@
                                     <outlet property="nameLabel" destination="KxV-Jv-1wB" id="g91-Eg-M1f"/>
                                     <outlet property="telLabel" destination="WwD-Dg-9gC" id="yqQ-5F-SNG"/>
                                     <outlet property="thumbnailImageView" destination="bLb-Da-yXx" id="9FB-P1-GTg"/>
+                                    <segue destination="qXh-UT-DwJ" kind="show" identifier="showDetail" id="7HK-9U-DR9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -86,11 +88,62 @@
                             <outlet property="delegate" destination="4v7-NM-hQw" id="dWW-c5-NcN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Dcs-q0-Hyr"/>
+                    <navigationItem key="navigationItem" id="J0m-sB-wr3">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="Coe-r5-TUa">
+                            <connections>
+                                <action selector="editable:" destination="4v7-NM-hQw" id="yyu-Pp-MP7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="vWu-OQ-tiG">
+                            <connections>
+                                <action selector="nonEditable:" destination="4v7-NM-hQw" id="dxV-eW-Wba"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ee-Cp-xvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="455.19999999999999" y="77.811094452773617"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="RDB-w5-Exz">
+            <objects>
+                <viewController id="qXh-UT-DwJ" customClass="DetailViewController" customModule="Custom_TableView_Cell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EFt-gj-5h2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u1W-JX-hpy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6D-52-2dk">
+                                <rect key="frame" x="40" y="377" width="335" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydY-Tw-uwt">
+                                <rect key="frame" x="40" y="484" width="335" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aS1-6d-vg2"/>
+                    </view>
+                    <connections>
+                        <outlet property="cellImageView" destination="u1W-JX-hpy" id="UVr-dQ-CfZ"/>
+                        <outlet property="loca" destination="S6D-52-2dk" id="n7k-kQ-EYg"/>
+                        <outlet property="tel" destination="ydY-Tw-uwt" id="E3M-op-Ysw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6rS-dw-UYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216.8" y="77.811094452773617"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qIc-Ez-8m8">
