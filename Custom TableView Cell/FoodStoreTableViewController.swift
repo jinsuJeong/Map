@@ -153,6 +153,10 @@ class FoodStoreTableViewController: UITableViewController {
                 destinationController.te = foodStoreTel[indexPath.row]
                 destinationController.menu = foodMenus[indexPath.row]
             }
+        }else if segue.identifier=="totalMap"{
+            let destinationController = segue.destination as! TotalMapViewController
+            destinationController.locations=foodStoreLocation
+            destinationController.names=foodStoreNames
         }
     }
     

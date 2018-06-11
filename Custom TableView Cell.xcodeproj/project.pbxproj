@@ -14,6 +14,7 @@
 		0568D8A520A7175C00CB259C /* FoodStoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0568D8A420A7175C00CB259C /* FoodStoreTableViewController.swift */; };
 		05AE16B820A8619A00978E45 /* FoodStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AE16B720A8619A00978E45 /* FoodStoreTableViewCell.swift */; };
 		3C3CD59F20BBDAE90038AC12 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3CD59E20BBDAE90038AC12 /* DetailViewController.swift */; };
+		3CCAAF8F20CE512000A7ECF5 /* TotalMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCAAF8E20CE512000A7ECF5 /* TotalMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0568D8A420A7175C00CB259C /* FoodStoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStoreTableViewController.swift; sourceTree = "<group>"; };
 		05AE16B720A8619A00978E45 /* FoodStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStoreTableViewCell.swift; sourceTree = "<group>"; };
 		3C3CD59E20BBDAE90038AC12 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3CCAAF8E20CE512000A7ECF5 /* TotalMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalMapViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				0568D89720A7125200CB259C /* LaunchScreen.storyboard */,
 				0568D89A20A7125200CB259C /* Info.plist */,
 				0568D89220A7125200CB259C /* Main.storyboard */,
+				3CCAAF8E20CE512000A7ECF5 /* TotalMapViewController.swift */,
 				3C3CD59E20BBDAE90038AC12 /* DetailViewController.swift */,
 				0568D8A420A7175C00CB259C /* FoodStoreTableViewController.swift */,
 			);
@@ -146,6 +149,7 @@
 				05AE16B820A8619A00978E45 /* FoodStoreTableViewCell.swift in Sources */,
 				0568D8A520A7175C00CB259C /* FoodStoreTableViewController.swift in Sources */,
 				3C3CD59F20BBDAE90038AC12 /* DetailViewController.swift in Sources */,
+				3CCAAF8F20CE512000A7ECF5 /* TotalMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
